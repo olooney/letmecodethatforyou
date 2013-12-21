@@ -1,7 +1,7 @@
 Let Me Code That For You
 ========================
 
-Taking a queue from the popular [let me google that for you][LMG] service,
+Taking a cue from the popular [let me google that for you][LMG] service,
 "[let me code that for you][LMC]" expands the concept to programming. Does the
 guy on the forum seem like he won't quit asking until someone's done his
 homework for him? Does a coworker keep bringing up a question that could be
