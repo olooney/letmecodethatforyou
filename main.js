@@ -76,6 +76,7 @@ $(function() {
                                 $('#progress-bar').parent('.progress').removeClass('active');
 		 						$('#result').csv(formData.csv);
                                 $('#step-done').fadeIn();
+                                mouse.remove();
 		 					});
 						});
 					});
