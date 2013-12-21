@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>	  <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>		 <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>		 <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+	<head>
+		<!-- technical meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatibele" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="robots" content="index,noarchive,nofollow">
+
+		<title>Let Me Code That For You</title>
+
+		<!-- seo meta -->
+		<meta name="description" content="tool for demonstrating a simple SQL query to someone who should have been able to write it him-or-herself.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="code, sql, joke, programmer humor">
+
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+
+		<!-- HTML5 shim IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div class="container">
+            <div class="page-header">
+                <h1>Let Me Code That For You</h1>
+            </div>
+			<div class="row">
+				<form id="code-form" class="col-lg-6 col-md-12" role="form" action="#">
+				  <div class="form-group">
+					<label for="lang">Language</label>
+					<select class="form-control" id="lang" name="lang">
+                        <option value="sql" selected>SQL</option>
+                    </select>
+				  </div>
+				  <div class="form-group">
+					<label for="cmd">Command</label>
+					<input class="form-control" id="cmd" name="cmd" placeholder="psql datasource username">
+				  </div>
+				  <div class="form-group">
+					<label id="code-field-label" for="code">SQL Query:</label>
+					<textarea id="code" name="code" class="form-control" rows="10" placeholder="SELECT * FROM ..."></textarea>
+				  </div>
+				  <div id="csv-group" class="form-group">
+					<label for="csv">Result</label>
+					<textarea id="csv" name="csv" class="form-control" rows="10" placeholder="ID,NAME"></textarea>
+					<p class="help-block">CSV format, column names on first row</p>
+				  </div>
+				  <div class="form-group">
+					  <button id="submit" type="submit" class="btn btn-default" action="#">Submit</button>
+				  </div>
+
+				  <!-- hidden in record mode, shown at the end of playback mode -->
+				  <div id="result-group" class="form-group hidden">
+					<label for="result">Result</label>
+					<div class="progress progress-striped active">
+					  <div id="progress-bar" class="progress-bar" style="width:0%">
+					  </div>
+					</div>
+					<div id="result">
+					</div>
+					<a id="reset" href="#">Reset</a>
+				  </div>
+
+				  <!-- shown in record mode after hitting Submit -->
+				  <div id="share-group" class="form-group hidden">
+					<label for="share-link">Share Link</label>
+					<input class="form-control" id="share-link">
+					<p class="help-block">Copy this link and send it to a friend!</p>
+					<label>Test Link</label>
+					<div>
+						<a id="test-link">Try it yourself!</a>
+					</div>
+				  </div>
+				</form>
+                <div id="steps" class="col-lg-6 col-md-12 hidden">
+                    <div id="step-cmd" class="alert alert-info">Step 1. Log in</div>
+                    <div id="step-code" class="alert alert-info">Step 2. Type code</div>
+                    <div id="step-submit" class="alert alert-info">Step 2. Run it</div>
+                    <div id="step-done" class="alert alert-success">
+                        There you go! All done.
+                        <small class="text-muted pull-right">Was that so hard?</small>
+                    </div>
+                </div>
+			</div>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/URI.js/1.11.2/URI.min.js" type="text/javascript"></script>
+		<script src="csv.js"></script>
+		<script src="typewriter.js"></script>
+		<script src="base64.min.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>

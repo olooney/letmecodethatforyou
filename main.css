@@ -1,0 +1,23 @@
+.mouse {
+	position: absolute;
+	height: 23px;
+	width: 17px;
+	background-image: url(mouse.png);
+	top: 18px;
+	left: 42px;
+}
+
+/* Bootstrap smoothes out progress bar updates by
+ * using "transition: width .6s ease". Unfortunately,
+ * since we're updating the width via JavaScript, the
+ * effect is a half second "lag" before it updates to
+ * where we tell it. This results in kind of a "jumpy"
+ * bar, but I like it since it looks more like it's
+ * doing "real" work.
+ */
+.progress .progress-bar {
+    -webkit-transition: width .2s ease;
+    -moz-transition: width .2s ease;
+    -o-transition: width .2s ease;
+    transition: width .2s ease;
+}
